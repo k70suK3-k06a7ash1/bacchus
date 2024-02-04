@@ -155,10 +155,10 @@ export default function DashboardPage() {
                     </p>
                   </CardContent>
                 </Card>
-                {/* <Card>
+                <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">
-                      Active Now
+                      会計回数
                     </CardTitle>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -179,7 +179,7 @@ export default function DashboardPage() {
                       +201 since last hour
                     </p>
                   </CardContent>
-                </Card> */}
+                </Card>
               </div>
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
                 <Card className="col-span-4">
@@ -192,10 +192,8 @@ export default function DashboardPage() {
                 </Card>
                 <Card className="col-span-3">
                   <CardHeader>
-                    <CardTitle>Recent Sales</CardTitle>
-                    <CardDescription>
-                      You made 265 sales this month.
-                    </CardDescription>
+                    <CardTitle>支払い</CardTitle>
+                    <CardDescription>直近記録された支払い品目</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <RecentSales />
