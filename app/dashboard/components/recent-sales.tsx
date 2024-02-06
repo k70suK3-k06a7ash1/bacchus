@@ -15,7 +15,7 @@ export function RecentSales() {
   return (
     <div className="space-y-8">
       {list.map((bookkeeping) => (
-        <Row {...bookkeeping} />
+        <Row key={bookkeeping.itemName} {...bookkeeping} />
       ))}
     </div>
   );
