@@ -1,5 +1,4 @@
 import { Input } from "@/components/ui/input";
-import { useState } from "react";
 import { Label } from "@/components/ui/label";
 
 export default function Register() {
