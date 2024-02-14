@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Image from "next/image";
 
 import { Button } from "@/registry/new-york/ui/button";
 import {
