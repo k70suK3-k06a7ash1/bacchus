@@ -12,13 +12,17 @@ export default function Register() {
   return (
     <>
       <div className="py-4 px-8">
-        <InputWrapper>
-          <Label htmlFor="cost">品目</Label>
-          <Input placeholder="品目" id="cost" type="number" />
-        </InputWrapper>
+        家計簿登録
         <Spacer y={4} />
         <InputWrapper>
+          <Label htmlFor="cost">品目</Label>
+          <Spacer y={2} />
+          <Input id="cost" type="number" />
+        </InputWrapper>
+        <Spacer y={6} />
+        <InputWrapper>
           <Label htmlFor="cost">金額</Label>
+          <Spacer y={2} />
           <Center currency="円">
             <Input
               onChange={(value) => setCost(Number(value.currentTarget.value))}
@@ -28,10 +32,9 @@ export default function Register() {
           </Center>
         </InputWrapper>
         <Spacer y={8} />
-        <div className="flex justify-center">
+        <div className="flex justify-center ">
           <CgAddR size={48} />
         </div>
-
         {/* <Spacer y={4} /> */}
         {/* <div className="grid w-full max-w-sm items-center gap-1.5">
           <Label htmlFor="cost">金額</Label>
