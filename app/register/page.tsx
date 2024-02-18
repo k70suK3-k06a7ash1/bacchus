@@ -14,14 +14,13 @@ export default function Register() {
       <div className="py-4 px-8">
         <InputWrapper>
           <Label htmlFor="cost">品目</Label>
-          <Input size={18} placeholder="品目" id="cost" type="number" />
+          <Input placeholder="品目" id="cost" type="number" />
         </InputWrapper>
         <Spacer y={4} />
         <InputWrapper>
           <Label htmlFor="cost">金額</Label>
           <Center currency="円">
             <Input
-              size={18}
               onChange={(value) => setCost(Number(value.currentTarget.value))}
               id="cost"
               type="number"
