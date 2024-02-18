@@ -12,35 +12,28 @@ export default function Register() {
   return (
     <>
       <div className="py-4 px-8">
-        <div className="grid w-full max-w-sm items-center gap-1.5">
+        <InputWrapper>
           <Label htmlFor="cost">品目</Label>
-          <Input placeholder="金額" id="cost" type="number" />
-        </div>
+          <Input placeholder="品目" id="cost" type="number" />
+        </InputWrapper>
         <Spacer y={4} />
-        <div className="grid w-full max-w-sm items-center gap-1.5">
+        <InputWrapper>
           <Label htmlFor="cost">金額</Label>
           <Center currency="円">
             <Input
               onChange={(value) => setCost(Number(value.currentTarget.value))}
-              placeholder="現地通貨"
               id="cost"
               type="number"
             />
           </Center>
-        </div>
-        <Spacer y={4} />
-        <div className="grid w-full max-w-sm items-center gap-1.5">
+        </InputWrapper>
+        {/* <Spacer y={4} /> */}
+        {/* <div className="grid w-full max-w-sm items-center gap-1.5">
           <Label htmlFor="cost">金額</Label>
-          <Center currency="円">
-            <Input
-              value={cost}
-              disabled
-              placeholder="母国通貨"
-              id="cost"
-              type="number"
-            />
+          <Center currency="ドル">
+            <Input value={cost / 150} disabled id="cost" type="number" />
           </Center>
-        </div>
+        </div> */}
       </div>
     </>
   );
@@ -54,4 +47,7 @@ const Center = ({ children, currency }: TComposition & Props) => (
     {children} <Spacer x={2} />
     {currency}
   </div>
+);
+const InputWrapper = ({ children }: TComposition) => (
+  <div className="grid w-full max-w-sm items-center gap-1.5">{children}</div>
 );
