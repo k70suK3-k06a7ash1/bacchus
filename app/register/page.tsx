@@ -16,7 +16,7 @@ export default function Register() {
       </div>
       <div className="py-4 px-8">
         家計簿登録
-        <Spacer y={4} />
+        <Spacer y={8} />
         <InputWrapper>
           <Label htmlFor="cost">品目</Label>
           <Spacer y={2} />
@@ -53,5 +53,5 @@ const Center = ({ children, currency }: TComposition & Props) => (
   </div>
 );
 const InputWrapper = ({ children }: TComposition) => (
-  <div className="grid w-full max-w-sm items-center gap-1.5">{children}</div>
+  <div className="grid w-full items-center gap-1.5">{children}</div>
 );
