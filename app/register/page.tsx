@@ -53,5 +53,5 @@ const Center = ({ children, currency }: TComposition & Props) => (
   </div>
 );
 const InputWrapper = ({ children }: TComposition) => (
-  <div className="grid w-full items-center gap-1.5">{children}</div>
+  <div className="grid w-full items-center text-base gap-1.5">{children}</div>
 );
