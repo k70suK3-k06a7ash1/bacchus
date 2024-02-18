@@ -11,6 +11,9 @@ export default function Register() {
   const [cost, setCost] = useState(0);
   return (
     <>
+      <div className="h-[52px] bg-black flex items-center px-8">
+        <span className="text-white text-lg">Bacchus</span>
+      </div>
       <div className="py-4 px-8">
         家計簿登録
         <Spacer y={4} />
@@ -33,15 +36,8 @@ export default function Register() {
         </InputWrapper>
         <Spacer y={8} />
         <div className="flex justify-center ">
-          <CgAddR size={48} />
+          <CgAddR size={48} onClick={() => window.alert("hello")} />
         </div>
-        {/* <Spacer y={4} /> */}
-        {/* <div className="grid w-full max-w-sm items-center gap-1.5">
-          <Label htmlFor="cost">金額</Label>
-          <Center currency="ドル">
-            <Input value={cost / 150} disabled id="cost" type="number" />
-          </Center>
-        </div> */}
       </div>
     </>
   );
