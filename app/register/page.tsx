@@ -20,7 +20,7 @@ export default function Register() {
         <InputWrapper>
           <Label htmlFor="cost">品目</Label>
           <Spacer y={2} />
-          <Input id="cost" type="number" />
+          <Input className="text-xl" id="cost" type="number" />
         </InputWrapper>
         <Spacer y={6} />
         <InputWrapper>
@@ -28,6 +28,7 @@ export default function Register() {
           <Spacer y={2} />
           <Center currency="円">
             <Input
+              className="text-xl"
               onChange={(value) => setCost(Number(value.currentTarget.value))}
               id="cost"
               type="number"
@@ -53,5 +54,5 @@ const Center = ({ children, currency }: TComposition & Props) => (
   </div>
 );
 const InputWrapper = ({ children }: TComposition) => (
-  <div className="grid w-full items-center text-base gap-1.5">{children}</div>
+  <div className="grid w-full items-center gap-1.5">{children}</div>
 );
