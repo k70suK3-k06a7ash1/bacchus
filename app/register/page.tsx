@@ -4,9 +4,9 @@ import { Label } from "@/components/ui/label";
 import { Spacer } from "@nextui-org/spacer";
 import { ReactNode, useState } from "react";
 import { CgAddR } from "react-icons/cg";
-type TComposition = {
-  children: ReactNode;
-};
+import { TComposition } from "../_packages/types";
+import { Center } from "../_packages/styles/Center";
+
 export default function Register() {
   const [cost, setCost] = useState(0);
   return (
@@ -44,15 +44,6 @@ export default function Register() {
   );
 }
 
-type Props = {
-  currency: string;
-};
-const Center = ({ children, currency }: TComposition & Props) => (
-  <div className="flex items-center">
-    {children} <Spacer x={2} />
-    {currency}
-  </div>
-);
 const InputWrapper = ({ children }: TComposition) => (
   <div className="grid w-full items-center gap-1.5">{children}</div>
 );
