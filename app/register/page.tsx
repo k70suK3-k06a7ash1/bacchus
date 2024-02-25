@@ -2,10 +2,10 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Spacer } from "@nextui-org/spacer";
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 import { CgAddR } from "react-icons/cg";
-import { TComposition } from "../_packages/types";
 import { Center } from "../_packages/styles/Center";
+import { InputWrapper } from "../_packages/styles/InputWrapper";
 
 export default function Register() {
   const [cost, setCost] = useState(0);
@@ -43,7 +43,3 @@ export default function Register() {
     </>
   );
 }
-
-const InputWrapper = ({ children }: TComposition) => (
-  <div className="grid w-full items-center gap-1.5">{children}</div>
-);
