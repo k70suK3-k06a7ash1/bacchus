@@ -11,9 +11,6 @@ export default function Register() {
   const [cost, setCost] = useState(0);
   return (
     <>
-      <div className="h-[52px] bg-black flex items-center px-8">
-        <span className="text-white text-lg">Bacchus</span>
-      </div>
       <div className="py-4 px-8">
         家計簿登録
         <Spacer y={8} />
