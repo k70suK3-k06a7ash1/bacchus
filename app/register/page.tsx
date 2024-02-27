@@ -15,9 +15,9 @@ export default function Register() {
         家計簿登録
         <Spacer y={8} />
         <InputWrapper>
-          <Label htmlFor="cost">品目</Label>
+          <Label htmlFor="title">品目</Label>
           <Spacer y={2} />
-          <Input className="text-xl" id="cost" type="number" />
+          <Input className="text-xl" id="title" type="number" />
         </InputWrapper>
         <Spacer y={6} />
         <InputWrapper>
