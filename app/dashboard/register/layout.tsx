@@ -1,6 +1,6 @@
 "use client";
 
-import { TComposition } from "../_packages/types";
+import { TComposition } from "../../_packages/types";
 
 export default function Layout({ children }: TComposition) {
   return (

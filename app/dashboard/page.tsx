@@ -1,4 +1,8 @@
 import { Metadata } from "next";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
+
+import { createClient } from "@/utils/supabase/server";
 
 import { Button } from "@/registry/new-york/ui/button";
 import {
@@ -27,10 +31,19 @@ export const metadata: Metadata = {
   description: "Example dashboard app built using the components.",
 };
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  const cookieStore = cookies();
+  const supabase = createClient(cookieStore);
+
+  const { data, error } = await supabase.auth.getUser();
+
+  if (error || !data?.user) {
+    redirect("/");
+  }
   return (
     <>
       <div className="md:hidden">hello</div>
+      <p>Hello {data.user.email}</p>
       <div className="hidden flex-col md:flex">
         <div className="border-b">
           <div className="flex h-16 items-center px-4">

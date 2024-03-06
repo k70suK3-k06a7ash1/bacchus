@@ -4,8 +4,8 @@ import { Label } from "@/components/ui/label";
 import { Spacer } from "@nextui-org/spacer";
 import { useState } from "react";
 import { CgAddR } from "react-icons/cg";
-import { Center } from "../_packages/styles/Center";
-import { InputWrapper } from "../_packages/styles/InputWrapper";
+import { Center } from "../../_packages/styles/Center";
+import { InputWrapper } from "../../_packages/styles/InputWrapper";
 
 export default function Register() {
   const [cost, setCost] = useState(0);
