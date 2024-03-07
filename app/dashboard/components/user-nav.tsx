@@ -2,8 +2,8 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/new-york/ui/avatar"
-import { Button } from "@/registry/new-york/ui/button"
+} from "@/registry/new-york/ui/avatar";
+import { Button } from "@/registry/new-york/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,9 +13,12 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "@/registry/new-york/ui/dropdown-menu"
+} from "@/registry/new-york/ui/dropdown-menu";
 
-export function UserNav() {
+type Props = {
+  userEmail: string;
+};
+export function UserNav({ userEmail }: Props) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -31,7 +34,7 @@ export function UserNav() {
           <div className="flex flex-col space-y-1">
             <p className="text-sm font-medium leading-none">shadcn</p>
             <p className="text-xs leading-none text-muted-foreground">
-              m@example.com
+              {userEmail}
             </p>
           </div>
         </DropdownMenuLabel>
@@ -58,5 +61,5 @@ export function UserNav() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

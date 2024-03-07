@@ -42,10 +42,6 @@ export default async function DashboardPage() {
   }
   return (
     <>
-      <div className="flex justify-end">
-        <div className="md:hidden">hello</div>
-        <p>Hello {data.user.email}</p>
-      </div>
       <div className="hidden flex-col md:flex">
         <div className="border-b">
           <div className="flex h-16 items-center px-4">
@@ -53,7 +49,7 @@ export default async function DashboardPage() {
             <MainNav className="mx-6" />
             <div className="ml-auto flex items-center space-x-4">
               <Search />
-              <UserNav />
+              <UserNav userEmail={data.user.email ?? ""} />
             </div>
           </div>
         </div>
