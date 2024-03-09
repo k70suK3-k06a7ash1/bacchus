@@ -25,6 +25,7 @@ import { RecentSales } from "@/app/dashboard/components/recent-sales";
 import { Search } from "@/app/dashboard/components/search";
 import TeamSwitcher from "@/app/dashboard/components/team-switcher";
 import { UserNav } from "@/app/dashboard/components/user-nav";
+import { Fab } from "../_packages/components/fab";
 
 export const metadata: Metadata = {
   title: "Dashboard",
@@ -42,6 +43,7 @@ export default async function DashboardPage() {
   }
   return (
     <>
+      <Fab />
       <div className="hidden flex-col md:flex">
         <div className="border-b">
           <div className="flex h-16 items-center px-4">
