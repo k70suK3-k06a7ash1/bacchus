@@ -25,7 +25,7 @@ import { RecentSales } from "@/app/dashboard/components/recent-sales";
 import { Search } from "@/app/dashboard/components/search";
 import TeamSwitcher from "@/app/dashboard/components/team-switcher";
 import { UserNav } from "@/app/dashboard/components/user-nav";
-import { Fab } from "../_packages/components/fab";
+import { Fab } from "../_packages/components/FabButton";
 
 export const metadata: Metadata = {
   title: "Dashboard",
